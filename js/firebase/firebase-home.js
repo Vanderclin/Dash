@@ -29,15 +29,10 @@ firebase.auth().onAuthStateChanged(function (user) {
 		display_verified = user.emailVerified;
 		account_state = true;
 		getData();
-		
-		document.getElementById("modal-profile-title-name").innerText = display_name;
-		document.getElementById("modal-profile-title-email");
-		document.getElementById("modal-profile-verified");
-		document.getElementById("modal-profile-verified-description");
-		
-		
+		getProfile(display_name, display_email, display_verified);
 	} else {
 		account_state = false;
+		window.location.replace("/");
 	}
 
 });
@@ -45,42 +40,6 @@ firebase.auth().onAuthStateChanged(function (user) {
 $("#navbar-display-picture").on("click", function () {
 	if (account_state) {
 		$("#static_profile").modal("show");
-	} else {
-		$("#static_signin").modal("show");
-	}
-});
-
-
-$("#button-signin").on("click", function () {
-
-	var email = document.getElementById('input-email').value;
-	var password = document.getElementById('input-password').value;
-
-
-	if (email === "" || email.length === 0) {
-		document.getElementById("input-email").classList.add("is-invalid");
-		return;
-	}
-	if (password === "" || password.length === 0) {
-		document.getElementById("input-password").classList.add("is-invalid");
-		return;
-	} else {
-		firebase.auth().signInWithEmailAndPassword(email, password).then(function () {
-			$("#static_signin").modal("hide");
-		}).catch(function (error) {
-			var errorCode = error.code;
-			var errorMessage = error.message;
-			if (errorCode === 'auth/wrong-password') {
-				alert('Senha incorreta.');
-			} else if (errorCode === 'auth/user-not-found') {
-				alert('Usuário não registrado.');
-			} else {
-				alert(errorMessage);
-			}
-			alert(error);
-			document.getElementById('button-signin').disabled = false;
-		});
-		document.getElementById('button-signin').disabled = true;
 	}
 });
 
@@ -133,7 +92,7 @@ function getData() {
 		card += '<div class="card border-dark mb-3">';
 		card += '<div class="card-header d-flex">';
 		card += '<span class="me-auto d-block">Solicitação de transferência</span>';
-		card += '<img class="payment-verification" src="assets/icons/user_verified.png" alt="">';
+		card += '<img class="payment-verification" src="../assets/icons/user_error.png" alt="">';
 		card += '</div>';
 		card += '<div class="card-body">';
 		card += '<span class="d-block"><strong>Usuário: </strong>'+wd_name+'</span>';
@@ -146,4 +105,33 @@ function getData() {
 		card += '</div>';
 		$("#content-private").html($("#content-private").html() + card);
 	});
+}
+
+
+function getProfile(u_name, u_email, u_verified) {
+	var modalProfileName = document.getElementById("modal-profile-title-name");
+	var modalProfileEmail = document.getElementById("modal-profile-title-email");
+	var modalProfileVerified = document.getElementById("modal-profile-verified");
+	var modalProfileVerifiedDescription = document.getElementById("modal-profile-verified-description");
+	
+	if (u_name === null || u_name === "") {
+		modalProfileName.innerText = "Não definido";
+	} else {
+		modalProfileName.innerText = u_name;
+	}
+	
+	if (u_email === null || u_email === "") {
+		modalProfileEmail.innerText = "Não definido";
+	} else {
+		modalProfileEmail.innerText = u_email;
+	}
+	
+	if (u_verified === true) {
+		modalProfileVerified.src = "../assets/icons/user_verified.png";
+		modalProfileVerifiedDescription.innerText = "Verificado";
+	} else {
+		modalProfileVerified.src = "../assets/icons/user_unverified.png";
+		modalProfileVerifiedDescription.innerText = "Não verificado";
+	}
+	
 }
