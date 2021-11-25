@@ -64,50 +64,22 @@ body {
 }
 
 .form {
-  margin-bottom: 3px;
-  margin-top: 3px;
   width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
 }
-.form .form-control {
-  box-sizing: border-box;
-  height: auto;
-  padding: 10px;
-  position: relative;
-}
-.form .form-control:focus {
-  z-index: 2;
-}
-.form img {
-  display: flex;
-  margin: 0 auto;
-}
-.form input::placeholder {
-  color: #ffffff;
-}
-.form input:-ms-input-placeholder {
-  color: #ffffff;
-}
-.form input::-ms-input-placeholder {
-  color: #ffffff;
-}
+
 .form input[type="email"] {
-  background-color: #101418;
-  border: solid 1px #ffffff;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  color: #ffffff;
-  height: 40px;
   margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .form input[type="password"] {
-  background-color: #101418;
-  border: solid 1px #ffffff;
+  margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  color: #ffffff;
-  height: 40px;
-  margin-bottom: 10px;
 }
 
 
@@ -128,6 +100,10 @@ body {
 .font-wrath-style {
   font-family: WrathStyles;
   font-weight: lighter;
+}
+
+.hide {
+  display: none;
 }
 
 .modal-content {
@@ -196,6 +172,22 @@ body {
   height: 30px;
   margin-right: 0px;
   width: 30px;
+}
+
+.section-one {
+  background-color: #212529;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+  -ms-flex-align: center;
+}
+.parent {
+  display: flex;
+  height: 100%;
+  width: 100%;
 }
 
 .payment-verification {

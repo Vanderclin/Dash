@@ -12,70 +12,18 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/blog.css" rel="stylesheet">
     <title>Dashboard</title>
-</head>
+  </head>
 
-<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand me-auto font-cuprum-regular" href="#">Dashboard</a>
-            <span class="ms-auto me-1" id="navbar-display-name"></span>
-            <img class="navbar-avatar" id="navbar-display-picture" src="assets/icons/user_avatar.png">
-        </div>
-    </nav>
+  <body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
 
-
-    <div class="container py-3">
-        <div class="row row-cols-1 row-cols-md-2 mb-3" id="content-private">
-		  
-		  
-		  
-        </div>
-    </div>
-
-
-    <div class="modal fade" id="static_signin" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-sm">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <h3 class="modal-span">Administration</h3>
-                    <div class="form">
-                        <input class="form-control" id="input-email" type="email" placeholder="E-mail">
-                        <input class="form-control" id="input-password" type="password" placeholder="Senha">
-                        <button class="btn btn-sm btn-outline-light w-100" id="button-signin">Entrar</button>
-                    </div>
-                    <h6 class="modal-span">© 2021 Dashboard</h6>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="static_profile" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-sm">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="modal-profile">
-                        <div class="modal-profile-image">
-                            <img src="assets/icons/user_avatar.png" id="modal-profile-image" alt="SignIn">
-                        </div>
-                        <div class="modal-profile-title">
-                            <h2 id="modal-profile-title-name"></h2>
-                            <h6 id="modal-profile-title-email"></h6>
-                        </div>
-                        <div class="modal-profile-verified">
-                            <img src="assets/icons/user_verified.png" id="modal-profile-verified" alt="verified">
-                            <span id="modal-profile-verified-description"></span>
-                        </div>
-                        <div class="col-12 d-flex mt-3">
-                            <button class="btn btn-outline-light w-50 me-1" id="button-settings">Configurações</button>
-                            <button class="btn btn-outline-light w-50 ms-1" id="button-signout">Sair</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
+	<div class="section-one d-flex justify-content-center align-items-center container" id="section-one">
+	  <div class="form">
+		<input class="form-control form-control-lg" id="input-email" type="email" placeholder="E-mail">
+		<input class="form-control form-control-lg" id="input-password" type="password" placeholder="Senha">
+		<button class="btn btn-lg btn-outline-light w-100" id="button-signin">Entrar</button>
+	  </div>
+	</div>
+	
     <script src="js/vendor/jquery-3.5.1.slim.min.js"></script>
     <script src="js/vendor/popper.min.js"></script>
     <script src="js/bootstrap.js"></script>
@@ -86,5 +34,5 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    <script src="js/firebase/firebase.js"></script>
-</body></html>
+    <script src="js/firebase/firebase-app.js"></script>
+  </body></html>
