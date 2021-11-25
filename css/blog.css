@@ -1,0 +1,204 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css");
+
+@font-face {
+  font-family: "AngerStyles";
+  font-style: normal;
+  font-weight: normal;
+  src: local("AngerStyles"), url("../assets/fonts/AngerStyles.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Cuprum-Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Cuprum-Regular"), url("../assets/fonts/Cuprum-Regular.ttf") format("truetype");
+}
+
+@font-face  {
+  font-family: "Jacksilver";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Jacksilver"), url("../assets/fonts/Jacksilver.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "WrathStyles";
+  font-style: normal;
+  font-weight: normal;
+  src: local("WrathStyles"), url("../assets/fonts/WrathStyles.ttf") format("truetype");
+}
+
+html,
+body {
+  background-color: #101010;
+  color: #ffffff;
+  font-family: Cuprum-Regular;
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+	font-size: 16px;
+	}
+}
+
+.card {
+  background-color: #212529;
+  color:#ffffff;
+}
+
+.card span {
+  font-size: 12pt;
+}
+
+.dropdown-item {
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.dropdown-menu-dark {
+  background: #212529;
+  border: solid 1px #233F61;
+  color: #fff;
+}
+
+.form {
+  margin-bottom: 3px;
+  margin-top: 3px;
+  width: 100%;
+}
+.form .form-control {
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  position: relative;
+}
+.form .form-control:focus {
+  z-index: 2;
+}
+.form img {
+  display: flex;
+  margin: 0 auto;
+}
+.form input::placeholder {
+  color: #ffffff;
+}
+.form input:-ms-input-placeholder {
+  color: #ffffff;
+}
+.form input::-ms-input-placeholder {
+  color: #ffffff;
+}
+.form input[type="email"] {
+  background-color: #101418;
+  border: solid 1px #ffffff;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  color: #ffffff;
+  height: 40px;
+  margin-bottom: -1px;
+}
+
+.form input[type="password"] {
+  background-color: #101418;
+  border: solid 1px #ffffff;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  color: #ffffff;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+
+/* Fonts Styles */
+.font-anger-styles {
+  font-family: AngerStyles;
+  font-weight: lighter;
+}
+.font-cuprum-regular {
+  font-family: Cuprum-Regular;
+  font-weight: lighter;
+}
+.font-jacksilver {
+  font-family: Jacksilver;
+  font-weight: lighter;
+}
+
+.font-wrath-style {
+  font-family: WrathStyles;
+  font-weight: lighter;
+}
+
+.modal-content {
+  background-color: #212529;
+  border: solid 2px #101418;
+}
+
+.modal-span {
+  text-align:center;
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+
+.modal-profile {
+  
+}
+
+.modal-profile-image {
+  display:flex;
+}
+
+.modal-profile-image img {
+  background-color:#233F61;
+  border-radius:50%;
+  height: 25% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 25% !important;
+}
+
+.modal-profile-title {
+  padding: 5px;
+}
+
+.modal-profile-title h2 {
+  font-weight: bold;
+  text-align: center;
+}
+
+.modal-profile-title h6 {
+  font-weight: bold;
+  margin-top: -10px;
+  text-align: center;
+}
+
+.modal-profile-verified {
+  display: flex;
+  margin-top: -13px;
+}
+
+.modal-profile-verified img {
+  height: 6%;
+  margin-left: auto !important;
+  width: 6%;.
+}
+
+.modal-profile-verified span {
+  margin-right: auto !important;
+}
+
+
+.navbar-avatar {
+  background: #233F61;
+  border: solid 2px #233F61;
+  border-radius: 50%;
+  height: 30px;
+  margin-right: 0px;
+  width: 30px;
+}
+
+.payment-verification {
+  height: 18px;
+  width: 18px;
+}
