@@ -72,12 +72,12 @@ function getData() {
 			wd_date = wd_date;
 		}
 		if (wd_email === null || wd_email === "") {
-			wd_email = "não definido";
+			wd_email = "N/A";
 		} else {
 			wd_email = wd_email;
 		}
 		if (wd_name === null || wd_name === "") {
-			wd_name = "não definido,";
+			wd_name = "N/A";
 		} else {
 			wd_name = wd_name;
 		}
