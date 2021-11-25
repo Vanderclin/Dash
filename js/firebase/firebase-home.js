@@ -82,7 +82,7 @@ function getData() {
 			wd_name = wd_name;
 		}
 		if (wd_pix === null || wd_pix === "") {
-			wd_pix = "não definido";
+			wd_pix = "N/A";
 		} else {
 			wd_pix = wd_pix;
 		}
