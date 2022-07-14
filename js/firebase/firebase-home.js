@@ -53,7 +53,7 @@ $("#button-signout").on("click", function () {
 
 function getData() {
 	var rescue = firebase.database().ref('rescue');
-	rescue.orderByChild("withdraw_request_date").on('child_added', function (snapshot) {
+	rescue.orderByChild("withdraw_request_date")limitToFirst(10).on('child_added', function (snapshot) {
 
 		var wd_amount = snapshot.child("withdraw_request_amount").val();
 		var wd_date = snapshot.child("withdraw_request_date").val();
